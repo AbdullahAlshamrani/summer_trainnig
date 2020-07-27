@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Arsenal Forever</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav">
+      <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Arsenal Forever</label>
+        <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Video</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Managers</a></li>
+        </ul>
+        </nav>
+    </div>
+
+
+<section class="Match">
+  <div class="NextMatch">
+    <h2>Next Match</h2>
+    <p>next match in 20/20 in emaraits studims in season 25 from premerleuge</p>
+      </div>
+        <img src="https://www.golisports.com/wp-content/uploads/2019/01/Arsenal-vs-chelsea.jpg" alt="">
+</section>
+
+
+<section class="calc">
+  <div class="titlecalc">Calculator</div>
+  <form>
+    <input class="n1" type="number" name="num1" placeholder="Number 1">
+    <div class="method"><select name="operator">
+      <option>None</option>
+      <option>Add</option>
+      <option>Sub</option>
+      <option>Mul</option>
+      <option>Div</option>
+    </select></div>
+    <input class="n2" type="number" name="num2" placeholder="Number 2">
+
+    <br>
+    <button type="submit" name="submit" value="submit">Calculate</button>
+  </form>
+  <p>The answer is: </p>
+</section>
+<?php
+  if (isset($_GET['submit'])) {
+    $result1 = $_GET['num1'];
+    $result2 = $_GET['num2'];
+    $operator = $_GET['operator'];
+    switch ($operator) {
+      case None:
+        echo "You need to select a method";
+        break;
+
+      case Add:
+        echo $result1 + $result2;
+        break;
+
+      case Sub:
+        echo $result1 - $result2;
+        break;
+
+      case Mul:
+          echo $result1 * $result2;
+          break;
+
+      case Div:
+        echo $result1 / $result2;
+        break;
+    }
+  }
+?>
+
+
+
+
+
+<section class="News">
+  <div class="linews">
+    <h2>Club News</h2>
+  </div>
+
+  <div class="thenews">
+    <h4>Arsenal remembers COVID-19 victims</h4>
+    <img src="https://www.arsenal.com/sites/default/files/styles/tablet_16x9/public/images/stadium_7.jpg?itok=AvG8mXme" alt="">
+    <p>During the past three months, we have received correspondence from a significant number of families and friends of fans who died due to the COVID-19 pandemic.
+We would like to recognise these supporters with a special tribute in our matchday programme on our ‘home’ return, when we are scheduled to play Norwich City. The club welcomes short obituaries to: programme@arsenal.co.uk.
+There will hopefully be scope to include a photo so please keep the tribute to no more than 30 words, which we will require no later than Monday, June 15. We will also require an address in order that we can send those concerned a complimentary programme.
+The thoughts of Arsenal Football Club are with those many supporters who have been affected by this devastating virus. </p>
+  </div>
+
+
+
+
+
+
+
+
+  <section class="footer">
+  <h2>Footer</h2>
+</section>
+  </body>
+</html>
